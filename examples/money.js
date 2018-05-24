@@ -9,16 +9,9 @@
 
 var Money = require ('js-money');
 
-// creates a 10.00 EUR
-var tenEur = new Money(1000, Money.EUR);
+var currencies = require('./currencies.json')
 
-// 5 EUR
-var fiveEur = tenEur.divide(2); 
-// 20 EUR
-var twentyEur = tenEur.multiply(2);
+Money.currencies = currencies
 
-// Returns an array of Money objects [3.34,3.33,3.33]
-var shares = tenEur.allocate(1,1,1);
-
-// 
-var fromDecimal = new Money(15.62, Money.USD);
+var a = new Money(1000, 'USD')
+var b = new Money(2000, 'RUB')
